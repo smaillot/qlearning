@@ -75,7 +75,7 @@ while s0 == goal:
 plt.close()
 plt.figure(figsize=(dim[1]/2,dim[0]),facecolor='w') 
 
-for _ in range(500):
+for _ in range(100):
     
     preview = np.zeros(dim)
             
@@ -108,7 +108,7 @@ for _ in range(500):
     preview[tuple(mapper(s0, dim))] = 1
     preview[tuple(mapper(goal, dim))] = 1
     gw.DrawMap(preview, model)
-    plt.pause(0.01)
+    plt.pause(0.001)
     
 
     

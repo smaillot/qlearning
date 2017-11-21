@@ -23,7 +23,7 @@ def normalize(vec):
     s = np.sum(vec)
     v = vec
     if s != 0:
-        v = map(float, vec) / s
+        v = vec / s
 
     return v
                
@@ -81,6 +81,5 @@ class QLearning:
         
         alpha = self.learning_rate
         gamma = self.discount_factor
-        self.Q[state, action] += alpha * ( self.R[state, action] + gamma * max( self.Q[next_state, :] ) - self.Q[state, action] )
-        
+        self.Q[state, action] += alpha * ( self.R[state, action] + gamma * max( self.Q[next_state, :] ) - self.Q[state, action] )       
         
