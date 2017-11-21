@@ -1,2 +1,2 @@
 $ cat .gitattributes
-.ipynb linguist-documentation=Python
+.ipynb linguist-language=Python
